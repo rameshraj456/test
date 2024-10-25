@@ -3,10 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Portfolio | RajPurohit Ramesh</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        .navbar { box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .hero-section {
+            background: linear-gradient(45deg, #1a237e, #283593);
+            padding: 100px 0;
+        }
+        .card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .achievement-badge {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .skill-progress {
+            height: 10px;
+            border-radius: 5px;
+        }
+        .project-card {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
-    <h1>this is a sample for testing</h1>
-    <h2>my name is goutham</h2>
-</body>
-</html>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-user-graduate me-2"></i>Portfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center" id="home">
+        <div class="container">
+            <img src="./WhatsApp Image 2024-06-18 at 20.16.20_6ec38d4f.jpg" alt="Profile" height="150px" width="150px" class="rounded-circle mb-4" style="border: 5px solid white;">
+            <h1 class="display-4 fw-bold">RajPurohit Ramesh</h1>
+            <p class="lead">IT Student | Developer | Tech Enthusiast</p>
+            <div class="social-links mt-4">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-5" id="about">
+        <div class="container">
+            <h2 class="text-center mb-5">About Me</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Education</h3>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5>Bachelor of Technology</h5>
+                            <p class="text-muted">Information Technology</p>
+                            <p>Roll Number: 22071A12J0</p>
+                            <p>Year: 3rd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Quick Stats</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Current CGPA</span>
+                                <span class="badge bg-primary">8.5</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Projects Completed</span>
+                                <span class="badge bg-success">12</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Certifications</span>
+                                <span class="badge bg-info">8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="bg-light py-5" id="projects">
+        <div class="container">
+            <h2 class="text-center mb-5">Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <!-- <div class="card project-card h-100">
+                        <img src="https://thumbs.dreamstime.com/z/artificial-intelligence-concept-face-recognition-abstract-digital-human-head-futuristic-background-generate-ai-278408497.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Image Recognition</h5>
+                            <p class="card-text">Developed an AI-powered image recognition system using TensorFlow and Python.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-secondary">TensorFlow</span>
+                                <span class="badge bg-success">OpenCV</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card h-100">
+                        <img src="https://expertshare.live/wp-content/uploads/2022/04/The-best-hybrid-event-e-learning-platform-for-pros.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Learning Platform</h5>
+                            <p class="card-text">Built a full-stack e-learning platform with React and Node.js.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary">React</span>
+                                <span class="badge bg-secondary">Node.js</span>
+                                <span class="badge bg-success">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <!-- <div class="card project-card h-100">
+                        <img src="https://www.techtarget.com/rms/onlineImages/iota-smart_home_mobile.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Home System</h5>
+                            <p class="card-text">Developed an IoT-based smart home automation system.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary">Arduino</span>
+                                <span class="badge bg-secondary">IoT</span>
+                                <span class="badge bg-success">C++</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-5" id="skills">
+        <div class="container">
+            <h2 class="text-center mb-5">Skills</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4>Programming Languages</h4>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar bg-primary" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Java</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar bg-success" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>C++</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar bg-info" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h4>Web Technologies</h4>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>HTML/CSS</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar bg-warning" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>React</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar bg-primary" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="bg-light py-5" id="achievements">
+        <div class="container">
+            <h2 class="text-center mb-5">Achievements</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="achievement-badge text-center">
+                        <i class="fas fa-trophy fa-3x text-warning mb-3"></i>
+                        <h5>Hackathon Winner</h5>
+                        <p>First place in National College Hackathon 2023</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="achievement-badge text-center">
+                        <i class="fas fa-medal fa-3x text-primary mb-3"></i>
+                        <h5>Academic Excellence</h5>
+                        <p>Consistently maintained 8.5+ CGPA</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="achievement-badge text-center">
+                        <i class="fas fa-certificate fa-3x text-success mb-3"></i>
+                        <h5>Certifications</h5>
+                        <p>8 Professional certifications from leading platforms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-4 text-center mb-3 mb-md-0">
+                                    <i class="fas fa-envelope fa-2x text-primary mb-2"></i>
+                                    <p>rameshraj2455@gmail.com</p>
+                                </div>
+                                <div class="col-md-4 text-center mb-3 mb-md-0">
+                                    <i class="fas fa-phone fa-2x text-success mb-2"></i>
+                                    <p>+91 9640402644</p>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <i class="fas fa-map-marker-alt fa-2x text-danger mb-2"></i>
+                                    <p>mg road, vizianagaram, AP, India</p>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="social-links mb-3">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p
